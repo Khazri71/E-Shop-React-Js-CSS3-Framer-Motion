@@ -1,38 +1,196 @@
-.App {
-  text-align: center;
+/***Navbar Component*/
+.navbar nav {
+  height: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: var(--main-color-white);
+  font-size: 1.2rem;
+  padding: 0 10px;
 }
-
-.App-logo {
-  height: 40vmin;
+.navbar nav a {
+  margin: 0 var(--main-margin);
+  text-decoration: none;
+  color: var(--main-color-text);
+}
+.navbar nav a.active {
+  font-size: 1.3rem;
+  background-color: var(--main-color-background);
+  color: var(--main-color-white);
+  padding: 4px 10px;
+  border-radius: calc(var(--main-border-radius) / 3);
+}
+/***Home Component***/
+.home {
+  background-image: url("./components/images/img0.jpg");
+  background-size: cover;
+  background-position: center;
+}
+.home::before {
+  position: absolute;
+  content: "Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum ";
+  min-width: 300px;
+  height: 100px;
+  background-color: var(--main-color-white);
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  color: var(--main-color-dark);
+  padding: 70px 15px 10px;
+  font-size: 1rem;
+  line-height: 1.8;
+  border: 6px solid var(--main-color-background);
+  border-radius: var(--main-border-radius);
+}
+.home::after {
+  position: absolute;
+  content: "Welcome";
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
+  color: var(--main-color-background);
+  top: 38%;
+  font-size: 2rem;
+  font-weight: bold;
+}
+/***Products Component***/
+.products {
+  background-color: var(--main-color-white);
+}
+.products .slider-outer {
+  overflow: hidden;
+  cursor: -webkit-grab;
+  cursor: grab;
+  width: 85%;
+  margin: 0 auto;
+}
+.products .slider-outer .slider-inner {
+  background-color: transparent;
+  z-index: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.products .slider-outer .slider-inner .image-item {
+  margin: 0 var(--main-margin);
+  min-width: 300px;
+  min-height: 350px;
+  padding: 5px;
+  z-index: -1;
+}
+.products .slider-outer .slider-inner .image-item img {
+  width: 100%;
+  height: 100%;
+  border-radius: var(--main-border-radius);
   pointer-events: none;
 }
+/***About Component***/
+.about {
+  background-color: var(--main-color-dark);
+  color: var(--main-color-white);
+}
+.about h1 {
+  margin-bottom: calc((var(--main-margin) * 3) + (var(--main-margin) / 2));
+}
+.about p {
+  width: 70%;
+  text-align: center;
+  margin: 0 auto;
+  line-height: 1.8;
+}
+/***Contact Component***/
+.contact {
+  background-image: url("./components/images/img2.jpg");
+  background-size: cover;
+  background-position: center;
+}
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.contact form {
+  width: 80%;
+  text-align: center;
+  margin: 0 auto;
+}
+.contact form input,
+.contact form textarea {
+  width: 80%;
+  padding: 12px;
+  font-size: 1.3rem;
+  border: none;
+  outline: none;
+  margin-bottom: calc(var(--main-margin) / 2);
+  color: var(--main-color-text);
+  border-radius: var(--main-border-radius);
+}
+.contact form textarea {
+  resize: none;
+}
+.contact form button {
+  padding: 15px;
+  font-size: 1.3rem;
+  border: none;
+  outline: none;
+  min-width: 10%;
+  color: var(--main-color-text);
+  cursor: pointer;
+  border-radius: var(--main-border-radius);
+  font-family: "Dancing Script", cursive;
+}
+::-webkit-input-placeholder {
+  font-family: "Dancing Script", cursive;
+}
+::-moz-placeholder {
+  font-family: "Dancing Script", cursive;
+}
+:-ms-input-placeholder {
+  font-family: "Dancing Script", cursive;
+}
+::-ms-input-placeholder {
+  font-family: "Dancing Script", cursive;
+}
+::placeholder {
+  font-family: "Dancing Script", cursive;
+}
+/***Global***/
+.home,
+.products,
+.about,
+.contact {
+  width: 100vw;
+  height: calc(100vh - 50px);
+  font-size: 20px;
+  color: var(--main-color-white);
+  text-align: center;
+  padding-top: 100px;
+}
+h1 {
+  text-transform: uppercase;
+}
+/*Media Query*/
+@media (max-width: 768px) {
+  /***Home Component***/
+  .home::after {
+    top: 40%;
+    font-size: 1.5rem;
   }
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+@media (max-width: 992px) {
+  .home::after {
+    top: 44%;
+    font-size: 1.5rem;
   }
 }

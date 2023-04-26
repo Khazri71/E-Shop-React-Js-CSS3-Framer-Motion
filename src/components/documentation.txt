@@ -1,0 +1,28 @@
+--NOTES--
+***Styling Active Links***
+***1***
+const navbarStyle = ({isActive}) =>{
+  return {
+        color : isActive ? "red" : "blue",
+        fontSize : isActive ? 3rem : 1rem
+  }
+}
+
+.....return (
+.....   <NavLink style = {navbarStyle}
+)
+.....
+***2***
+Style Directly From CSS 
+nav a.active{
+    color:red;
+    font-size: 3rem;
+}
+
+--ROADMAP--
+1- Create TemplateWith : HTML5 , CSS3 : JSX ( Javascript XML)
+2- Component Navbar
+3- Animation Transitions : Using Framer Motion Library
+4- Download Images From Pexels : You Can Filter Images - Choose Position , Size ...
+5- Animation Slider Grap : Using Framer Motion Library
+6- Clean Component : Home - Products

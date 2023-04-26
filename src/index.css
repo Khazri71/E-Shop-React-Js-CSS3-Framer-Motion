@@ -1,13 +1,35 @@
-body {
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap");
+/*Variables*/
+:root {
+  --main-color-white: #fff;
+  --main-color-dark: #000;
+  --main-color-text: #7e534d;
+  --main-color-background: #deb887;
+  --main-border-radius: 15px;
+  --main-margin: 20px;
+}
+/*Html*/
+html {
+  font-size: 19px;
+  font-weight: bold;
+}
+
+/*All*/
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+}
+/*Body*/
+body {
+  font-family: "Dancing Script", cursive;
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--main-color-dark);
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
